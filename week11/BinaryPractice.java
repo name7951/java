@@ -66,22 +66,22 @@ public class BinaryPractice {
 
 	}
 
-	public static int search(int[] x, int n, int key) {
+	public static int search(int[] x, int n, int key) { // 이진 탐색을 수행해서 인덱스를 변환하는 메소드
 
 		int lo = 0;
 		int hi = n - 1;
 		int mid;
 
 		while (hi >= lo) {
-			mid = (hi + lo) / 2;
-			if (key == x[mid]) // 키를 발견
-				return mid; // 인덱스를 반환
-			if (key < x[mid])
-				hi = mid - 1;
-			else
-				lo = mid + 1;
-		}
-		return -1; // 키를 찾지 못함
+            mid = (hi + lo) / 2;
+            if (key == x[mid])
+                return mid; // 키를 발견하면 인덱스를 반환
+            if (key < x[mid])
+                hi = mid - 1;
+            else
+                lo = mid + 1;
+        }
+        return -1; // 키를 찾지 못한 경우 -1을 반환
 
 	}
 
