@@ -40,15 +40,15 @@ public class Dice {
 
 	}
 
-	public static void printCount(int[] a, int[] b) {
+	public static void printCount(int[] a, int[] b) { // 주사위 던진 횟수 출력 메소드
 
-		for (int i = 1; i < a.length; i++) {
+		for (int i = 1; i <= 6; i++) {
 			System.out.println(i + "의 횟수 : " + b[i]);
 		}
 
 	}
 
-	public static void printArray(int[] array) {
+	public static void printArray(int[] array) { // 배열의 값 출력 메소드
 
 		System.out.println("배열에 저장된 값");
 		for (int i = 0; i < array.length; i++)
