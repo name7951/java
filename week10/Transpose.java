@@ -35,28 +35,24 @@ public class Transpose {
 
 		// 전치행렬을 출력한다
 		transpose(matrix);
-		
+
 		input.close();
 	}
 
-	public static void transpose(int[][] matrix) {
-
-		int m = row; // matrix 행의 갯수
-		int n = column; // matrix 열의 갯수
-		int[][] tMatrix = new int[n][m]; // n x m 크기의 2차원 배열을 만단다
-
-		// 전치행렬을 구한다
-		System.out.println("전치행렬 : ");
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j < matrix[n].length; j++)
-				System.out.print(matrix[n][m] + "\t");
-			System.out.println();
+	// 전치행렬을 구하는 메소드
+	public static void transpose(int[][] array) {
+		
+		int[][] tMatrix = new int[array[0].length][array.length];
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[i].length; j++) {
+				tMatrix[j][i] = array[i][j];
+			}
 		}
-		System.out.println();
-
+		
+		printMatrix(tMatrix);
 	}
-	
 
+	// 이차원 배열을 출력하는 메소드
 	public static void printMatrix(int[][] array) {
 
 		for (int i = 0; i < array.length; i++) {
